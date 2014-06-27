@@ -1,0 +1,27 @@
+{
+  "name": "HelloNodeJS",
+  "version": "0.0.0",
+  "description": "web app para probar despliegue en heroku",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanfegc/HelloNodeJS.git"
+  },
+  "keywords": [
+    "heroku",
+    "nodeJS"
+  ],
+  "author": "J.Fernando Godoy Caba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanfegc/HelloNodeJS/issues"
+  },
+  "homepage": "https://github.com/juanfegc/HelloNodeJS",
+  "dependencies": {
+    "express": "^4.4.5",
+    "logfmt": "^1.1.2"
+  }
+}
