@@ -12,7 +12,7 @@ Creamos un nuevo repositorio remoto en [GitHub] para nuestra app.
 Iniciamos el control de versiones del directorio local de nuestro proyecto, agregamos todos los archivos,
 guardamos, lo enlazamos con nuestro repositoiro remoto en GitHub y subimos los cambios.
 ``` sh
-cd web-app
+cd myapp
 git init
 git add .
 git commit -m "first commit"
@@ -21,15 +21,13 @@ git push -u origin master
 ```
 
 # ![Node.js](http://nodejs.org/images/logos/nodejs.png)
-Creamos un archivo **package.json** para declarar todas las dependencias de la app y las instalamos con npm.
+En el directorio raiz de nuestra app creamos un archivo **package.json** para declarar todas las dependencias de la app y las instalamos con npm.
 ``` sh
 npm init
 npm install express logfmt --save
 ```
-Creamos un **Procfile** para indicar como ejecutar nuestra web-app en heroku, con el contenido siguiente:
-``` javascript
-web: node app.js
-```
+También creamos un archivo **Procfile**
+con el contenido siguiente `web: node app.js` para indicarle a heroku como ejecutar nuestra app.
 
 # ![Heroku](http://www.treasuredata.com/img_logos/heroku.png)
 Necesitamos instalar la herramienta [Heroku toolbelt] para poder usar el cliente heroku en la linea de comandos.
@@ -42,11 +40,6 @@ git add .
 git commit -m "first deployment"
 git push -u origin master
 ```
-Accedemos a heroku desde el terminal con nuestor user y password
-``` sh
-heroku login
-heroku create
-```
 
 Probamos la app localmente en [http://localhost:5000] antes de subirla a Heroku
 [http://localhost:5000]:http://127.0.0.1:5000
@@ -55,11 +48,18 @@ Probamos la app localmente en [http://localhost:5000] antes de subirla a Heroku
 foreman start
 ```
 
+Accedemos a heroku desde el terminal con nuestro user y password y creamos nuestra webapp en heroku.
+``` sh
+heroku login
+heroku create
+```
+
 Desplegamos nuestra app en Heroku.
 ``` sh
 git push heroku master
 ```
-(opcional) renombramos el nombre del servicio web que heroku nos asignó por defecto.
+(opcional) renombramos el nombre de la webapp que heroku nos asignó por defecto.
+cuando lo creamos con el comando `heroku create`.
 ``` sh
 heroku apps:rename newname
 ```
