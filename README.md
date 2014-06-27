@@ -3,12 +3,12 @@ Como desplegar una app Node.js en un PaaS como [Heroku], comentado paso a paso.
 
 [Heroku]:http://www.heroku.com
 
-### ![GitHub](http://www.grails48.com/static/images/github-logo3.png)
+# ![GitHub](http://www.grails48.com/static/images/github-logo3.png)
 Creamos un nuevo repositorio remoto en [GitHub] para nuestra app.
 
 [GitHub]:https://github.com/
 
-### ![Git](http://git-scm.com/images/logo@2x.png)
+# ![Git](http://git-scm.com/images/logo@2x.png)
 Iniciamos el control de versiones del directorio local de nuestro proyecto, agregamos todos los archivos,
 guardamos, lo enlazamos con nuestro repositoiro remoto en GitHub y subimos los cambios.
 ``` sh
@@ -20,7 +20,7 @@ git remote add origin http://github.com/juanfegc/web-app.git
 git push -u origin master
 ```
 
-### ![Node.js](http://nodejs.org/images/logos/nodejs.png)
+# ![Node.js](http://nodejs.org/images/logos/nodejs.png)
 Creamos un archivo **package.json** para declarar todas las dependencias de la app y las instalamos con npm.
 ``` sh
 npm init
@@ -31,7 +31,7 @@ Creamos un **Procfile** para indicar como ejecutar nuestra web-app en heroku, co
 web: node app.js
 ```
 
-### ![Heroku](http://www.treasuredata.com/img_logos/heroku.png)
+# ![Heroku](http://www.treasuredata.com/img_logos/heroku.png)
 Necesitamos instalar la herramienta [Heroku toolbelt] para poder usar el cliente heroku en la linea de comandos.
 
 [Heroku toolbelt]:https://toolbelt.heroku.com/
@@ -68,4 +68,4 @@ Abrimos la app en nuestro navegador
 heroku open
 ```
 
-**realizado por J.Fernando Godoy Caba**
+**by J.Fernando Godoy Caba**
