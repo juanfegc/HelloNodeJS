@@ -36,6 +36,13 @@ Necesitamos instalar la herramienta [Heroku toolbelt] para poder usar el cliente
 
 [Heroku toolbelt]:https://toolbelt.heroku.com/
 
+Antes de nada guardamos todos los cambios en Git/GitHub antes de desplegar en heroku
+```sh
+git add .
+git commit -m "first deployment"
+git push -u origin master
+```
+Accedemos a heroku desde el terminal con nuestor user y password
 ``` sh
 heroku login
 heroku create
@@ -47,15 +54,9 @@ Probamos la app localmente en [http://localhost:5000] antes de subirla a Heroku
 ```
 foreman start
 ```
-Guardamos todos los cambios en Git/GitHub antes de desplegar
-```sh
-git add .
-git commit -m "first deployment"
-git push -u origin master
-```
+
 Desplegamos nuestra app en Heroku.
 ``` sh
-heroku create
 git push heroku master
 ```
 (opcional) renombramos el nombre del servicio web que heroku nos asignó por defecto.
